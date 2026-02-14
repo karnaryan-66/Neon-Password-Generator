@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neon Password Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="bg-glow"></div>
+
+  <div class="container">
+    <h1>🔐 Neon Password Generator</h1>
+    <p class="subtitle">Generate secure passwords with style.</p>
+
+    <div class="output-box">
+      <input type="text" id="password" readonly placeholder="Your password will appear here..." />
+      <button id="copyBtn">📋 Copy</button>
+    </div>
+
+    <div class="settings">
+      <div class="row">
+        <label>Password Length: <span id="lengthValue">12</span></label>
+        <input type="range" id="lengthSlider" min="4" max="30" value="12" />
+      </div>
+
+      <div class="checkboxes">
+        <label><input type="checkbox" id="uppercase" checked /> Uppercase</label>
+        <label><input type="checkbox" id="lowercase" checked /> Lowercase</label>
+        <label><input type="checkbox" id="numbers" checked /> Numbers</label>
+        <label><input type="checkbox" id="symbols" checked /> Symbols</label>
+      </div>
+
+      <div class="strength">
+        <p>Strength:</p>
+        <div class="bar">
+          <div class="fill" id="strengthBar"></div>
+        </div>
+        <span id="strengthText">Medium</span>
+      </div>
+
+      <button class="generateBtn" id="generateBtn">⚡ Generate Password</button>
+    </div>
+
+    <p class="footer">Made by Aryan Karn 🚀</p>
+  </div>
+
+  <div class="toast" id="toast">Copied to clipboard ✅</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
